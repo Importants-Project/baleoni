@@ -1,0 +1,22 @@
+.searchProduct {
+    margin-top: 180px;
+    &__box {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 30px;
+            color: $black;
+        }
+
+        &-span {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            color: $primayColor;
+        }
+    }
+}

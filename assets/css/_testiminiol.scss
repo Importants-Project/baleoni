@@ -1,0 +1,193 @@
+.testiminiol {
+    position: relative;
+    margin-top: 60px;
+
+    &_beekeep__beeHive {
+        @include BeeHive(34px, 34px);
+        position: absolute;
+        right: 0;
+    }
+    &__box {
+        display: flex !important;
+        align-items: center;
+        &-name {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            color: $primayColor;
+            text-align: center;
+            display: flex;
+            margin: 18px auto 0;
+            justify-content: center;
+        }
+        &-desc {
+            font-family: Quicksand-Regular sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            margin-left: 10px;
+            color: $seconderyBold;
+            width: 340px;
+        }
+
+        &-img {
+            margin-right: 40px;
+        }
+
+        .beekeep__bihave {
+            @include BeeHive(130px, 148px);
+            margin: auto;
+            border: none;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__arrow {
+        position: relative;
+        margin-top: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &-dots {
+            position: absolute;
+            bottom: -73px !important;
+            list-style: none !important;
+            width: unset !important;
+            left: 50%;
+            transform: translate(-50%);
+            .slick-active {
+                width: 20px !important;
+                height: 20px !important;
+                position: unset !important;
+                background-image: url("../../assets/image/beehavie.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                list-style: none;
+            }
+            li {
+                margin-right:8px;
+                list-style: none;
+                position: relative !important;
+                width: 16px !important;
+                height: 16px !important;
+                background-image: url("../../assets/image/beehavieEmpty.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 1;
+            }
+        }
+        &-prev {
+            cursor: pointer;
+        }
+        &-next {
+            cursor: pointer;
+
+            img {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__info {
+        position: relative;
+
+        &-quoteTop {
+            position: absolute;
+            left: -20px;
+            top: -32px;
+        }
+
+        &-quoteBottom {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 45px;
+        color: $black;
+        text-align: center;
+        margin-bottom: 39px;
+        &::after {
+            @include splitText();
+        }
+    }
+
+    &__span {
+        color: $primayColor;
+    }
+
+    .slick-dots{
+        cursor: pointer;
+
+        display: flex !important;
+        button{
+            display: none;
+        }
+    }
+
+    .slick-dots:not(#_) {
+        button:before {
+            color: transparent;
+        }
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .testiminiol {
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        &__info {
+            &-quoteTop {
+                top: -10px;
+                left: 0;
+            }
+
+            &-quoteBottom {
+                bottom: 0;
+                right: 0;
+            }
+        }
+        &__box {
+            display: block !important;
+            .beekeep__bihave {
+                @include BeeHive(130px, 148px);
+                margin: auto;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &-img {
+                margin-right: 0;
+            }
+
+            &-name {
+                margin-bottom: 45px;
+            }
+
+            &-desc {
+                width: unset;
+                padding: 0 45px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .testiminiol {
+        &__arrow-dots,
+        &_beekeep__beeHive {
+            display: none !important;
+        }
+    }
+}

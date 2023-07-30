@@ -1,0 +1,117 @@
+@import "./mixsin";
+@import "./variable";
+@import "./header";
+@import "./footer";
+@import "./headline";
+
+//IndexPage
+@import "./hero";
+@import "./beekeep";
+@import "./farm";
+@import "./homeProduct";
+@import "./testiminiol";
+@import "./video";
+@import "./info";
+@import "./fuzzyButton";
+
+//AboutPage
+@import "./mission";
+@import "./about";
+@import "./imageGrid";
+
+//SertifikatPage
+@import "./sertifikat";
+@import "./test";
+
+//ProductPage
+@import "./pagination";
+@import "./filter";
+
+//ContactPage
+@import "./contactHero";
+@import "./contactForm";
+
+@import "./searchNotFound";
+@import "./searchProduct";
+
+@import "./responsive";
+@import "./error";
+@import "./bee";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: Quicksand-SemiBold  sans-serif;
+
+}
+p{
+    margin: 0;
+}
+
+h1,
+h2,h3,h4,h5,h6{
+height: auto;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    font-size: 100%;
+    overflow-x: hidden;
+    font-weight: 400;
+  }
+
+ .wrapper{
+    overflow-x: hidden;
+
+ }
+
+  a{
+    text-decoration: none;
+  }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+body {
+    background-color: $white;
+}
+
+.conteniar {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.d-none{
+    display: none;
+}
+
+.error-alert{
+    color:  #FC7676;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 12px;
+}
+
+.mask {
+    mask-image: url(../image/beehavie.svg) ;
+    mask-repeat: no-repeat;    
+    mask-size: contain;
+
+      }
+img{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+      .scrollHide{
+        overflow: hidden;
+      }

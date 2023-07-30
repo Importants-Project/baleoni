@@ -1,0 +1,118 @@
+.mission {
+    position: relative;
+    // margin-top: -170px;
+    margin-top: 20px;
+    z-index: 0;
+    &__leftSide {
+        margin: 0 24px 0 0;
+        img{
+            position: relative;
+            z-index: 1;
+            border-radius: 8px;
+        }
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: $black;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 45px;
+        margin-bottom: 24px;
+
+      
+        &::after  {
+            @include splitText()
+          }
+     
+    }
+
+    &__span {
+        color: $primayColor;
+    }
+
+    &__desc {
+        color: $seconderyBold;
+        font-family: Quicksand-Regular sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    &__beeHive1 {
+        position: absolute;
+        left: -100px;
+        top: -70px;
+        @include BeeHive(200px, 200px);
+    }
+    &__beeHive2 {
+        position: absolute;
+        left: 80px;
+        bottom: -90px;
+        @include BeeHive(50px, 50px);
+    }
+    &__beeHive3 {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        @include BeeHive(80px, 80px);
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+
+.mission {
+    // margin-top: -170px;
+    &__box {
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 28px;
+        margin: 24px 0 16px 0;
+        text-align: center;
+    }
+
+    &__desc {
+        text-align: center;
+    }
+
+    &__leftSide {
+        margin: 0;
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    &__beeHive1 {
+        left: -43px;
+        top: -37px;
+        @include BeeHive(109px, 109px);
+    }
+
+    &__beeHive2 {
+        display: none;
+    }
+
+    &__beeHive3 {
+        display: none;
+    }
+}
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .mission {
+        &__leftSide {
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}

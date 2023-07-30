@@ -1,0 +1,94 @@
+.hero {
+    position: relative;
+     padding: 150px 0 0;
+// padding: 60px 0 0;
+    &__leftSide {
+        width: 645px;
+        position: relative;
+    }
+
+    &__rightSide {
+        width: auto;
+        height: auto;
+        position: relative;
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 80px;
+    }
+
+    &__subTitle {
+        font-family: Quicksand-Medium sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: $primayColor;
+    }
+
+    &__title {
+        margin-top: 16px;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 45px;
+        color: $black;
+        margin-bottom: 24px;
+    }
+
+    &__desc {
+        font-family: Quicksand-Regular sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $seconderyBold;
+    }
+
+    &__button {
+        text-align: center;
+        background: $primaryGradient;
+        border-radius: 8px;
+        height: 48px;
+        width: 272px;
+        margin-top: 37px;
+
+        a {
+            font-family: Quicksand-Bold sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            color: $white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+        }
+    }
+
+    &__beeHive26 {
+        position: absolute;
+        left: 376px;
+        top: -20px;
+
+        @include BeeHive(26px, 26px);
+
+    }
+
+    &__beeHive32 {
+        position: absolute;
+        right: -51px;
+        top: 120px;
+        @include BeeHive(32px, 32px);
+       
+
+    }
+
+    &__beeHive80 {
+        position: absolute;
+        top: 230px;
+        left: -111px;
+        @include BeeHive(80px, 80px);
+    }
+}

@@ -1,0 +1,216 @@
+.beekeep {
+    position: relative;
+    margin-top: 60px;
+    &__beeHive {
+        @include BeeHive(24px, 24px);
+        position: absolute;
+        top: 475px;
+        right: 0px;
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__leftSide {
+        width: 504px;
+        margin-top: 60px;
+    }
+
+    &__rightSide {
+        position: relative;
+        width: 400px;
+    }
+
+    &__bihave {
+        margin-right: 16px;
+        img {
+            width: 168px;
+            height: 168px;
+            transition: 0.3s;
+            object-fit: cover;
+            // &:hover{
+            //     transform: scale(1.5);
+            // }
+        }
+    }
+
+    &SecondPart {
+        margin: 0px 0 0 6rem;
+        justify-content: center;
+    }
+
+    &TherdPart {
+        margin: -24px 0 0 13rem;
+    }
+
+    &__title {
+        font-family: Quicksand-SemiBold  sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        color: $black;
+        line-height: 45px;
+        margin-bottom: 24px;
+
+        &::after {
+            content: attr(data-end);
+            color: $primayColor;
+            position: absolute;
+            transform: translate(-100%, 0);
+        }
+    }
+    &__span {
+        color: $primayColor;
+    }
+    &__desc {
+        font-family: Quicksand-Regular sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $seconderyBold;
+    }
+
+    &__item {
+        position: relative;
+z-index: 1;
+        width: 400px;
+        height: 48px;
+        // background: $white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        margin-top: 24px;
+        &-img {
+            width: 48px;
+            height: 48px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 5;
+            margin-right: 16px;
+            margin-left: 11px;
+
+            img {
+                width: 30px;
+                height: 30px;
+                margin: 10px;
+            }
+        }
+        &-text {
+            font-family: Quicksand-Medium sans-serif;
+            z-index: 5;
+            color: $black;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            transition: all 0.5s ease-out;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 400px;
+            height: 48px;
+            background: $primaryGradient;
+            transition: opacity 0.5s ease-out;
+            z-index: 2;
+            opacity: 0;
+            border-radius: 8px;
+
+            &-img {
+                box-shadow: none !important;
+            }
+        }
+
+        &:hover::after {
+            opacity: 1;
+            transition: opacity 0.5s ease-in;
+        }
+
+        &:hover {
+            .beekeep__item-img {
+                box-shadow: none !important;
+            }
+            .beekeep__item-text {
+                position: relative;
+                color: $white;
+                transition: color 0.5s ease-in;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .beekeep {
+        &__flex {
+            display: block;
+        }
+
+        &__leftSide {
+            width: unset;
+        }
+
+        &__rightSide {
+            width: unset;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        &__desc {
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+        }
+
+        &__item {
+            width: 100%;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        &SecondPart {
+            margin: -14px 0 0 .6rem;
+            justify-content: center;
+        }
+
+        &TherdPart {
+            justify-content: center;
+            display: flex;
+            margin: -14px 0 23px .6rem;
+        }
+
+        &__bihave {
+            @include BeeHive(115px, 115px);
+            margin-right: 0px;
+
+            @media screen and (max-width:370px) {
+                @include BeeHive(93px, 93px);
+
+            }
+            img {
+                width: 115px;
+                height: 115px;
+                object-position: bottom;
+
+                @media screen and (max-width:370px) {
+                    width: 93px;
+                    height: 93px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .beeSecond {
+        display: none;
+    }
+}

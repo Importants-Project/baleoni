@@ -1,0 +1,135 @@
+@media only screen and (max-width: 1440px) {
+    .conteniar {
+        width: 1170px !important;
+    }
+}
+
+@media only screen and (max-width: 1340px) {
+    .conteniar {
+        width: 1090px !important;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .searchProduct__box{
+        display: block;
+        &-title {
+            margin-top: 100px;
+        }
+    }
+  
+
+    .about {
+        margin-top: 32px;
+        &__titleMob {
+            display: block;
+            text-align: center;
+        }
+        &__descMob {
+            text-align: center;
+            display: block;
+        }
+
+        &__title {
+            display: none;
+        }
+        &__desc {
+            display: none;
+        }
+    }
+
+    .conteniar {
+        width: 600px !important;
+    }
+
+    .hero {
+        &__flex {
+            flex-direction: column-reverse;
+            margin-top: 50px;
+        }
+
+        &__leftSide {
+            width: unset;
+            text-align: center;
+        }
+
+        &__rightSide {
+            img {
+                width: 100%;
+                margin-bottom: 24px;
+            }
+        }
+
+        &__subTitle {
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        &__title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 28px;
+            margin: 16px 0;
+        }
+
+        &__desc {
+            font-family: Quicksand-Regular sans-serif;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &__beeHive32 {
+            right: 0;
+            top: 250px;
+            @include BeeHive(16px, 16px);
+        }
+
+        &__beeHive26 {
+            display: none;
+        }
+
+        &__beeHive80 {
+            display: none;
+        }
+
+        &__button {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .conteniar {
+        width: 90% !important;
+    }
+
+    // .header {
+    //     &Mob {
+    //         width: 370px !important;
+    //     }
+    // }
+}
+
+// @media only screen and (max-width: 370px) {
+//     .conteniar {
+//         width: 350px !important;
+//     }
+
+//     .header {
+//         &Mob {
+//             width: 350px !important;
+//         }
+//     }
+// }
+
+// @media only screen and (max-width: 343px) {
+//     .conteniar {
+//         width: 320px !important;
+//     }
+
+//     .header {
+//         &Mob {
+//             width: 320px !important;
+//         }
+//     }
+// }

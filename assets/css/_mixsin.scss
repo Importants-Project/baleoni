@@ -1,0 +1,35 @@
+@mixin FontFace($nameFont, $srcFont) {
+    @font-face {
+        font-family: $nameFont sans-serif;
+        src: url($srcFont);
+    }
+}
+
+@mixin FontStyle($size, $weight, $family, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family sans-serif;
+    color: $color;
+}
+
+@mixin BeeHive($width, $height) {
+    width: $width;
+    height: $height;
+    background-image: url('../../assets/image/beehavie.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    // -webkit-clip-path:polygon();
+}
+
+@mixin splitText() {
+    content: attr(data-end);
+    color: $primayColor;
+    position: absolute;
+    transform: translate(-100%, 0);
+}
+
+@mixin flexbetween() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

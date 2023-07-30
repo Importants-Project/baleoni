@@ -1,0 +1,162 @@
+.headline {
+    position: relative;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin-bottom: 60px;
+
+    &.aboutHeadline {
+        background-image: url("../image/headline/aboutHeadline.jpg");
+    }
+
+    &.sertifikatHeadline {
+        background-image: url("../image/headline/sertifikatHeadline.jpg");
+    }
+
+    &.productHeadline {
+        background-image: url("../image/headline/mehsullarHeadline.png");
+    }
+
+    &.contactHeadline {
+        background-image: url("../image/headline/contactHeadline.jpg");
+    }
+
+    &__mob {
+        display: none;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 50%;
+        bottom: -10px;
+        width: 100%;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) -11.68%,
+            rgba(255, 255, 255, 0.487234) 49.52%,
+            $white 106.35%
+        );
+    }
+    &__box {
+        z-index: 1;
+        padding: 160px 0 0;
+
+        width: 1170px;
+        &-title {
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 45px;
+            text-align: center;
+            color: $black;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        &-subtitle {
+            position: relative;
+            font-family: Quicksand-Regular sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: center;
+            color: $seconderyBold;
+            z-index: 1;
+        }
+    }
+}
+
+@media only screen and (max-width: 1340px) {
+    .headline__box {
+        width: 1090px !important;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .headline {
+        &::after {
+            content: "";
+            bottom: 0;
+            z-index: 0;
+            position: relative;
+
+        }
+        &__box {
+            width: 600px !important;
+            &-title {
+                font-size: 24px;
+                line-height: 28px;
+                z-index: 0;
+
+            }
+            &-subtitle {
+                font-size: 12px;
+                line-height: 15px;
+                z-index: 0;
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .headline {
+        &__box {
+            margin: auto;
+            width: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .headline {
+        &__desktop {
+            display: none;
+        }
+        &.aboutHeadline,
+        &.sertifikatHeadline,
+        &.productHeadline,
+        &.contactHeadline {
+            background-image: none;
+        }
+        &__mob {
+            display: block;
+            position: relative;
+
+            .headline__color {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 50%;
+                    bottom: 0px;
+                    width: 100%;
+                    background: linear-gradient(
+                        180deg,
+                        rgba(255, 255, 255, 0) -11.68%,
+                        rgba(255, 255, 255, 0.487234) 49.52%,
+                        $white 106.35%
+                    );
+                }
+            }
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            &::after {
+                content: "";
+                background: $white;
+                filter: blur(22px);
+                height: 66%;
+                position: absolute;
+            }
+        }
+
+        &__box {
+            padding: 5px 0 0;
+        }
+    }
+}

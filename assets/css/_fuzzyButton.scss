@@ -1,0 +1,211 @@
+// .hero__buttonBox{
+//     .button{
+//         position:absolute;
+// .b_l_quad{
+//     position: absolute;
+//     top: 35px;
+//     left: 35px;
+// }
+//         .b_l_quad .button_spots{
+           
+//             @for $i from 1 through 20{
+//                 &:nth-child(#{$i}){ 
+//                     padding:random(3) + 2 + px;
+//                     left: -25 + ($i * 12) + px;
+//                     top: 50 + px;
+//                 }
+//             }
+//             @for $i from 20 through 40{
+//                 &:nth-child(#{$i}){
+//                     padding:random(3) + 2 + px;
+//                     left: -255 + ($i * 12) + px;
+//                     top: -12 + px;
+//                 }
+//             }
+//             @for $i from 40 through 46{
+//                 &:nth-child(#{$i}){
+//                     padding:random(3) + 2 + px;
+//                     left: 204px;
+//                     top: -488 + ($i * 12) + px;
+//                 }
+//             }
+    
+//             @for $i from 46 through 52{
+//                 &:nth-child(#{$i}){
+//                     padding:random(3) + 2 + px;
+//                     left: -10px;
+//                     top: -568 + ($i * 12) + px;
+//                 }
+//             }
+//         }
+//         .button_spots{
+//             position:absolute;
+//             border-radius:100px;
+//             opacity:1;
+//             top: 70px;
+//             animation:opacity 1s;
+            
+//             @for $i from 1 through 52{
+//                 &:nth-of-type(#{$i}){
+//                     transform-origin:90px - random(10) 20px - random(10);
+//                     background-image: url('../../assets/image/beehavie.svg');
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     width: 10px;
+//     height: 10px;
+//                     box-shadow:0px 0px 10px rgba(255,255,255,0.12);
+//                     transition:all 1s + random(10)/10;
+//                 }
+//             }
+//         }
+//         &_inner{
+//             &:hover 
+//             {
+//                 .button_spots{
+//                     @for $i from 1 through 19{
+//                         &:nth-of-type(#{$i}){
+//                             animation: spot-#{$i} .7s .4/random(10) + random(10)/10 + s linear infinite;
+//                         }
+//                     }
+//                     @for $i from 20 through 40{
+//                         &:nth-of-type(#{$i}){
+//                             animation: spot-#{$i} .7s .4/random(10) + random(10)/10 + s linear infinite;
+//                         }
+//                     }
+//                     @for $i from 40 through 46{
+//                         &:nth-of-type(#{$i}){
+//                             animation: spot-#{$i} .7s .4/random(10) + random(10)/10 + s linear infinite;
+//                         }
+//                     }
+//                     @for $i from 46 through 54{
+//                         &:nth-of-type(#{$i}){
+//                             animation: spot-#{$i} .7s .4/random(10) + random(10)/10 + s linear infinite;
+//                         }
+//                     }
+//                 }
+//             }
+            
+           
+//         }
+//     }
+// }
+
+
+
+
+
+// // .homeProducts__buttonBox{
+// //     .button{
+// //         position:absolute;
+// //         width: 100%;
+// // .b_l_quad{
+// //     top: 35px;
+// //     left: 0;
+// // }
+// //         .b_l_quad .button_spots{
+// //            width: 100%;
+// //             @for $i from 1 through 104{
+// //                 &:nth-child(#{$i}){ 
+// //                     padding:random(3) + 2 + px;
+// //                     left: 0 + ($i * 12) + px;
+// //                     top: 80 + px;
+// //                 }
+// //             }
+// //             // @for $i from 20 through 40{
+// //             //     &:nth-child(#{$i}){
+// //             //         padding:random(3) + 2 + px;
+// //             //         left: 267 + ($i * 12) + px;
+// //             //         top: -12 + px;
+// //             //     }
+// //             // }
+// //             // @for $i from 40 through 46{
+// //             //     &:nth-child(#{$i}){
+// //             //         padding:random(3) + 2 + px;
+// //             //         right: 100%;
+// //             //         top: -488 + ($i * 12) + px;
+// //             //     }
+// //             // }
+    
+// //             // @for $i from 46 through 52{
+// //             //     &:nth-child(#{$i}){
+// //             //         padding:random(3) + 2 + px;
+// //             //         left: 100%;
+// //             //         top: -568 + ($i * 12) + px;
+// //             //     }
+// //             // }
+// //         }
+// //         .button_spots{
+// //             position:absolute;
+// //             border-radius:100px;
+// //             opacity:1;
+// //             top: 70px;
+// //             animation:opacity 1s;
+            
+// //             @for $i from 1 through 104{
+// //                 &:nth-of-type(#{$i}){
+// //                     transform-origin:90px - random(10) 20px - random(10);
+// //                     background-image: url('../../assets/image/beehavie.svg');
+// //     background-repeat: no-repeat;
+// //     background-size: contain;
+// //     width: 10px;
+// //     height: 10px;
+// //                     box-shadow:0px 0px 10px rgba(255,255,255,0.12);
+// //                     transition:all 1s + random(10)/10;
+// //                 }
+// //             }
+// //         }
+// //         &_inner{
+// //             &:hover 
+// //             {
+// //                 .button_spots{
+// //                     @for $i from 1 through 104{
+// //                         &:nth-of-type(#{$i}){
+// //                             animation: spot-#{$i} .7s .4/random(10) + random(10)/10 + s linear infinite;
+// //                         }
+// //                     }
+// //                     @for $i from 20 through 40{
+// //                         &:nth-of-type(#{$i}){
+// //                             animation: spot-#{$i} .7s .4/random(10) + random(10)/10 + s linear infinite;
+// //                         }
+// //                     }
+// //                     @for $i from 40 through 46{
+// //                         &:nth-of-type(#{$i}){
+// //                             animation: spot-#{$i} .7s .4/random(10) + random(10)/10 + s linear infinite;
+// //                         }
+// //                     }
+// //                     @for $i from 46 through 54{
+// //                         &:nth-of-type(#{$i}){
+// //                             animation: spot-#{$i} .7s .4/random(10) + random(10)/10 + s linear infinite;
+// //                         }
+// //                     }
+// //                 }
+// //             }
+            
+           
+// //         }
+// //     }
+// // }
+// // @for $i from 1 through 20{
+// //     @keyframes spot-#{$i}{
+// //         from{opacity:0;}
+// //         to{transform:translateY(30px) translatex(-20px + $i*2);opacity:.6;}
+// //     }
+// // }
+// // @for $i from 20 through 40{
+// //     @keyframes spot-#{$i}{
+// //         from{opacity:0;}
+// //         to{transform:translateY(-30px) translatex(-50px + $i*2);opacity:.6;}
+// //     }
+// // }
+// // @for $i from 40 through 45{
+// //     @keyframes spot-#{$i}{
+// //         from{opacity:0;}
+// //         to{transform:translateY(-86px + $i*2) translatex(40px);opacity:.6;}
+// //     }
+// // }
+// // @for $i from 46 through 54{
+// //     @keyframes spot-#{$i}{
+// //         from{opacity:0;}
+// //         to{transform:translateY(-99px + $i*2) translatex(-40px);opacity:.6;}
+// //     }
+// // }

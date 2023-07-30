@@ -1,0 +1,143 @@
+.about {
+    margin-top: 150px;
+    margin-bottom: 60px;
+
+    &__title {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 45px;
+        color: $black;
+        margin-bottom: 50px;
+        &::after {
+            @include splitText();
+        }
+    }
+
+    &__titleMob {
+        display: none;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 28px;
+        color: $black;
+        margin-bottom: 24px;
+        &::after {
+            @include splitText();
+        }
+    }
+
+    &__desc {
+        font-family: Quicksand-Regular sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        color: $seconderyBold;
+    }
+
+    &__descMob {
+        display: none;
+        font-family: Quicksand-Regular sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        color: $seconderyBold;
+    }
+
+    &__span {
+        color: $primayColor;
+    }
+}
+
+.imageGrid {
+    // display: grid;
+    // padding: 16px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+    gap: 16px;
+
+    &__box {
+        display: flex;
+        margin-top: 28px;
+
+        &-leftSide {
+            margin: 0 24px 0 0;
+        }
+
+        &-img {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__box {
+            position: relative;
+            .imageGrid__beehive {
+                @include BeeHive(130px, 130px);
+                position: absolute;
+                top: -40px;
+                right: -60px;
+                z-index: -1;
+            }
+        }
+    }
+
+    &-col-2 {
+        img {
+            display: flex;
+        }
+    }
+
+    img {
+        // object-fit: cover;
+        border-radius: 8px;
+    }
+
+    &__firstBgAbout {
+        height: 480px;
+        width: 470px;
+    }
+
+    &__secondAbout {
+        height: 190px;
+        width: 306px;
+    }
+
+    &__lastAbout {
+        height: 404px;
+        width: 346px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .imageGrid {
+        gap: 8px !important;
+
+        &__box {
+            &-img {
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+   
+   
+}
+
+
+
+@media only screen and (max-width: 600px) and (orientation: landscape) {
+    .imageGrid__box{
+        align-items: flex-end;
+    }
+    .imageGrid__lastAbout {
+        max-width: 100% !important;
+        width: 280px !important;
+    }
+
+}
+
+
+
+
+

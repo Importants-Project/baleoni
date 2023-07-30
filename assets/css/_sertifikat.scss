@@ -1,0 +1,232 @@
+.sertifikat {
+    position: relative;
+    margin-top: 20px;
+    &__leftSide {
+        margin: 0 24px 0 0;
+
+        &Img{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__arrow-dots {
+        left: 50%;
+        transform: translate(-50%);
+
+        .slick-active {
+            width: 20px !important;
+            height: 20px !important;
+            position: unset !important;
+            background-image: url("../../assets/image/beehavie.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            list-style: none;
+        }
+        li {
+            list-style: none;
+            position: relative !important;
+            width: 16px !important;
+            height: 16px !important;
+            background-image: url("../../assets/image/beehavieEmpty.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 1;
+        }
+    }
+
+    &__heroBox {
+        position: relative;
+        &-bg {
+            width: 600px;
+            height: 418px;
+        }
+        .slick-dots:not(#_) {
+            button:before {
+                color: transparent;
+            }
+            z-index: 1;
+        }
+
+        .slick-slider {
+            position: absolute !important;
+            width: 100% !important;
+            top: 0 !important;
+            left: 0 !important;
+        }
+
+        &-slider {
+            &-img {
+                height: 370px;
+                width: 267px;
+                border-radius: 8px;
+                margin: 24px 16px;
+            }
+        }
+        &-position {
+            position: absolute;
+            top: 24px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: $black;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 45px;
+        margin-bottom: 24px;
+        &::after {
+            @include splitText();
+        }
+    }
+
+    &__span {
+        color: $primayColor;
+    }
+
+    &__desc {
+        color: $seconderyBold;
+        font-family: Quicksand-Regular sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+    .sertifikat__beeHive1 {
+        position: absolute;
+        left: -100px;
+        bottom: -70px;
+        @include BeeHive(200px, 200px);
+    }
+    .sertifikat__beeHive2 {
+        position: absolute;
+        left: 80px;
+        bottom: -90px;
+        @include BeeHive(50px, 50px);
+    }
+    .sertifikat__beeHive3 {
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+        @include BeeHive(80px, 80px);
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .sertifikat {
+        &__box {
+            flex-direction: column;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+            margin: 24px 0 16px 0;
+            text-align: center;
+        }
+
+        &__desc {
+            text-align: center;
+        }
+
+        &__leftSide {
+            margin: 0;
+            position: relative;
+        }
+
+        &__beeHive1 {
+            left: -70px !important;
+            bottom: -30px !important;
+            width: 110px !important;
+            height: 110px !important;
+            background: $primaryGradient;
+            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        &__beeHive2 {
+            display: none;
+        }
+
+        &__beeHive3 {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .sertifikat {
+        &__arrow-dots {
+            display: none !important;
+        }
+
+        &__leftSideImg {
+                img{
+                    height: 142px;
+                    width: 138px;
+                }
+        }
+
+        &__rightSideImg {
+width: 100%;
+            .imageGrid__box{
+                img{
+                    height: 118px;
+                }
+            }
+          
+        }
+
+      
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .sertifikat {
+        &__heroBox {
+            &-bg {
+                width: 100%;
+                 height:  270px;
+
+            }
+
+            &-slider {
+                &-img {
+                    width: 100%;
+                     height: 220px;
+
+                    right: 14px;
+                    padding: 10px;
+                    position: relative;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) and (orientation:landscape) {
+
+    .sertifikat {
+        &__heroBox {
+            &-bg {
+                 height:  350px;
+
+            }
+
+            &-slider {
+                &-img {
+                     height: 305px;
+                }
+            }
+        }
+    }
+}

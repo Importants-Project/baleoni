@@ -1,0 +1,148 @@
+.footer {
+    position: relative;
+    margin-top: 60px;
+
+    &__flex{
+        align-items: center;
+        display: flex;
+        justify-content: space-between
+    }
+
+    &Bg {
+        background: $primaryGradient;
+        height: 112px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // border-radius: 8px;
+        padding: 0 45px;
+
+        &Mob {
+            background: $primaryGradient;
+            height: 112px;
+            width: 100%;
+            margin: auto;
+            border-radius: 8px;
+            padding: 0 16px;
+
+            display: none;
+            &__logo {
+                height: 44px;
+                width: 124px;
+            }
+
+            &__sosialMedia {
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                // &-instagram {
+                //     margin-right: 19px;
+                // }
+            }
+            .flexbetween {
+                padding-top: 15px;
+                @include flexbetween();
+            }
+        }
+    }
+
+    &__title {
+        font-family: Quicksand-Medium sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        color: $black;
+    }
+
+    &__subtitle {
+        font-family: Quicksand-Medium sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        color: $black;
+    }
+
+    &__sosialMedia {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-title {
+            font-family: Quicksand-Medium sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            color: $black;
+        }
+
+        // &-instagram {
+        //     margin: 0 19px;
+        // }
+    }
+
+    &__copy {
+        text-align: center;
+        margin-top: 23px;
+        margin-bottom: 24px;
+        span {
+            font-family: Quicksand-Medium sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            color: $secondery;
+        }
+    }
+
+
+    
+
+
+   
+}
+
+@media only screen and (max-width: 1250px) {
+    .footer {
+        &Bg {
+            display: none;
+
+            &Mob {
+                display: block;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        &Bg {
+            &Mob {
+                width: auto;
+                margin: auto;
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 400px) {
+    .footer__title, 
+    .footer__subtitle{
+      font-size: 12px;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 360px) {
+    .footer {
+        &Bg {
+            &Mob {
+                width: 100% ;
+            }
+        }
+    }
+}

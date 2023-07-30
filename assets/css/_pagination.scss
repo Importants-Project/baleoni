@@ -1,0 +1,62 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    &__prev {
+        @include BeeHive(48px, 48px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include BeeHive(48px, 48px);
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__end {
+        position: relative;
+        z-index: -1;
+        background-image: url("../image/beehavieEnd.svg") !important;
+    }
+    &__num {
+        color: $black;
+        display: flex;
+        &-pag {
+            cursor: pointer;
+            padding: 14px 17px;
+            // @include BeeHive(48px, 48px);
+            background-image: url("../image/beehavieEmpty.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: 16px;
+            font-family: Quicksand-Medium sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            position: relative;
+
+           
+            span {
+                position: relative;
+                z-index: 3;
+            }
+        }
+        .active {
+            color: $white;
+            @include BeeHive(48px, 48px);
+            &::after {
+                content: "";
+                position: relative;
+                background-color: transparent;
+                padding: 0;
+            }
+        }
+    }
+}

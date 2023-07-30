@@ -1,0 +1,34 @@
+// root
+:root {
+    --primayColor:#FF6701;
+    --primaryGradient:linear-gradient(82.22deg, #FF6100 6.04%, #FF9600 98.08%);
+
+    --secondery:#B5B5B5;
+    --seconderyLight:#E8E8E8;
+    --seconderyBold:#696969;
+
+    --black:#272122;
+    --white:#FFFFFF;
+
+  }
+
+//colors
+$primayColor:var(--primayColor);
+$primaryGradient:var(--primaryGradient);
+
+$secondery: var(--secondery);
+$seconderyLight:  var(--seconderyLight);
+$seconderyBold:  var(--seconderyBold);
+
+$black:var(--black);
+$white:var(--white);
+
+
+
+
+@include FontFace(Quicksand-Bold, '~/assets/font/Quicksand-Bold.ttf' );
+@include FontFace(Quicksand-Light, '~/assets/font/Quicksand-Light.ttf' );
+@include FontFace(Quicksand-Medium, '~/assets/font/Quicksand-Medium.ttf' );
+@include FontFace(Quicksand-Regular, '~/assets/font/Quicksand-Regular.ttf' );
+@include FontFace(Quicksand-SemiBold, '~/assets/font/Quicksand-SemiBold.ttf' );
+@include FontFace(Quicksand-VariableFont, '~/assets/font/Quicksand-VariableFont_wght.ttf' );

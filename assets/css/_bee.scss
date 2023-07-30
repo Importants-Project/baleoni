@@ -1,0 +1,27 @@
+.beeSecond {
+    animation: sing 20s linear infinite;
+    position: absolute;
+    overflow-x: hidden;
+    z-index: 5;
+}
+@keyframes sing {
+    0% {
+        transform: translateX(0);
+        left: 0;
+        bottom: -35%;
+        overflow: hidden;
+    }
+    50% {
+        transform: translateX(50%);
+        left: 50%;
+        bottom: -25%;
+        overflow: hidden;
+    }
+
+    100% {
+        transform: translateX(100%);
+        left: 100%;
+        bottom: -15%;
+        overflow: hidden;
+    }
+}
